@@ -1,0 +1,35 @@
+{% load static %}
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static "app/bootstrap4/css/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "app/flat-ui/css/flat-ui.css" %}">
+    <link rel="stylesheet" href="{% static "app/main.css" %}">
+    <title>Food2</title>
+</head>
+<body>
+
+<div>
+
+    {% include "app/includes/navbar.html" %}
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<!-- Bootstrap 4 requires Popper.js -->
+<script src="https://unpkg.com/popper.js@1.14.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
+<script src="{% static "app/flat-ui/scripts/flat-ui.js" %}"></script>
+
+</body>
+</html>
+
