@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3aa985e8-3392-4c85-a9ca-532fc66d8aef" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.pep8speaks.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food2/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/food2/app/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,8 +80,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food2/app/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -92,8 +92,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food2/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            <state relative-caret-position="664">
+              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -101,7 +101,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".pep8speaks.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".pep8speaks.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.pep8speaks.yml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -154,11 +154,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/food2/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            <state relative-caret-position="529">
+              <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -213,13 +213,13 @@
         <option value="$PROJECT_DIR$/food2/app/templates/app/pages/create_account.html" />
         <option value="$PROJECT_DIR$/food2/app/templates/app/pages/signin.html" />
         <option value="$PROJECT_DIR$/food2/app/forms.py" />
-        <option value="$PROJECT_DIR$/food2/app/models.py" />
         <option value="$PROJECT_DIR$/food2/app/templates/app/pages/week_menu.html" />
         <option value="$PROJECT_DIR$/food2/app/urls.py" />
         <option value="$PROJECT_DIR$/food2/app/templates/app/includes/navbar.html" />
         <option value="$PROJECT_DIR$/food2/app/views.py" />
         <option value="$PROJECT_DIR$/food2/app/templates/app/pages/daily_recipe.html" />
         <option value="$PROJECT_DIR$/.pep8speaks.yml" />
+        <option value="$PROJECT_DIR$/food2/app/models.py" />
       </list>
     </option>
   </component>
@@ -319,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557188052492</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="linter added">
+      <created>1557188666175</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557188666175</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -359,7 +366,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Auth user added&#10;- Table name modified&#10;- DailyRecipe view added&#10;- WeekMenu view added" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Auth user added&#10;- Table name modified&#10;- DailyRecipe view added&#10;- WeekMenu view added" />
+    <MESSAGE value="linter added" />
+    <option name="LAST_COMMIT_MESSAGE" value="linter added" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/food2/app/admin.py">
@@ -536,12 +544,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food2/app/models.py">
+    <entry file="file://$PROJECT_DIR$/food2/app/templates/app/pages/daily_recipe.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        <state relative-caret-position="150">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food2/app/templates/app/pages/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.pep8speaks.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food2/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food2/app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -553,42 +588,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food2/app/templates/app/pages/daily_recipe.html">
+    <entry file="file://$PROJECT_DIR$/food2/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food2/app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="529">
+          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food2/app/templates/app/pages/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food2/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.pep8speaks.yml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

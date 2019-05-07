@@ -34,9 +34,11 @@ class IngredientRecipe(models.Model):
 class DailyRecipe(models.Model):
     class Meta:
         unique_together = (('user', 'day'),)
+
     user = models.ForeignKey(User, related_name='daily_recipe', on_delete='cascade')
     day = models.DateField(default=timezone.now, db_index=True)
-    recipe = models.ForeignKey(Recipe, on_delete='cascade', related_name='daily_recipe', unique=False, blank=True, null=True)
+    recipe = models.ForeignKey(Recipe, on_delete='cascade', related_name='daily_recipe', unique=False, blank=True,
+                               null=True)
 
     def __str__(self):
         return '{} - {}'.format(self.user.username, str(self.day))
