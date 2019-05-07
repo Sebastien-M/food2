@@ -5,14 +5,21 @@
 
         <div class="collapse navbar-collapse" id="navbar-collapse-01">
             <ul class="nav navbar-nav mr-auto col-md-8">
-                <li><a href="#fakelink">Recette du jour</a></li>
-                <li><a href="#fakelink">Menu de la semaine</a></li>
-                <li><a href="#fakelink">Liste de courses</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url "daily-recipe" %}">Recette du jour</a></li>
+                    <li><a href="{% url "week-menu" %}">Menu de la semaine</a></li>
+                    <li><a href="#fakelink">Liste de courses</a></li>
+                {% endif %}
             </ul>
 
             <li class="row">
-                <li><a href="#">Se connecter</a></li>
-                <li><a href="{% url "create-account" %}">Créer un compte</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url "logout" %}">Se déconnecter</a></li>
+                {% else %}
+                    <li><a href="{% url "signin" %}">Se connecter</a></li>
+                    <li><a href="{% url "signup" %}">Créer un compte</a></li>
+                {% endif %}
+
             </li>
 
         </div>

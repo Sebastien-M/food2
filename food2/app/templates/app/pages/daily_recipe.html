@@ -1,0 +1,18 @@
+{% extends "app/index.html" %}
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            <h4>Recette du jour</h4>
+        </div>
+        <div class="card-body">
+            {% if todays_recipe %}
+                <h5 class="card-title">{{ todays_recipe.name }}</h5>
+{#                <p class="card-text">{{ todays_recipe.name }}</p>#}
+            {% else %}
+                <p class="card-text">Aucune recette trouvée pour aujourd'hui</p>
+                <p>Définissez votre menu pour la semaine</p>
+                <a href="#" class="btn btn-primary">Définir</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

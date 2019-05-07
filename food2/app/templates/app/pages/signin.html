@@ -1,0 +1,41 @@
+{% extends "app/index.html" %}
+{% block content %}
+
+    <div class="col-md-8 offset-md-2 text-center center-block" id="account_creatrion_form" style="height: 100%">
+
+        <form method="post">
+            {% csrf_token %}
+            <h1 class="h3 mb-3 font-weight-normal">Se connecter</h1>
+
+            {% if form.username.errors %}
+                <div class="form-group has-error">
+            {% else %}
+                <div class="form-group">
+            {% endif %}
+            <label for="username">Nom d'utilisateur</label>
+
+            <input type="text" class="form-control" id="username" placeholder=""
+                   name="{{ form.username.name }}" required>
+            {% for error in form.username.errors %}
+                <small id="passwordHelpBlock" class="form-text text-muted text-danger">{{ error }}</small>
+            {% endfor %}
+            </div>
+
+            {% if form.password.errors %}
+                <div class="form-group has-error">
+            {% else %}
+                <div class="form-group">
+            {% endif %}
+            <label for="password">Mot de passe</label>
+            <input type="password" class="form-control" id="password" name="{{ form.password.name }}">
+            {% for error in form.password.errors %}
+                <small id="passwordHelpBlock" class="form-text text-muted text-danger">{{ error }}</small>
+            {% endfor %}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+
+    </div>
+
+{% endblock %}

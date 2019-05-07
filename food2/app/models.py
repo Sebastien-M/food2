@@ -21,7 +21,7 @@ class Ingredient(models.Model):
 
 class IngredientRecipe(models.Model):
     class Meta:
-        db_table = 'food_api_ingredient_recipe'
+        db_table = 'app_ingredient_recipe'
 
     def __str__(self):
         return '{} - {}'.format(self.recipe.name, self.ingredient.name)
