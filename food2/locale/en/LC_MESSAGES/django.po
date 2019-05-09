@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 00:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: app/templates/app/pages/week_menu.html:15
+#, python-format
+msgid "%(day_name)s"
+msgstr ""
+
+#: app/utils.py:42
+msgid "Lundi"
+msgstr "Monday"
+
+#: app/utils.py:46
+msgid "Mardi"
+msgstr "Tuesday"
+
+#: app/utils.py:50
+msgid "Mercredi"
+msgstr "Wednesday"
+
+#: app/utils.py:54
+msgid "Jeudi"
+msgstr "Thursday"
+
+#: app/utils.py:58
+msgid "Vendredi"
+msgstr "Friday"
+
+#: app/utils.py:62
+msgid "Samedi"
+msgstr "Saturday"
+
+#: app/utils.py:66
+msgid "Dimanche"
+msgstr "Sunday"
+
+#: app/views.py:34
+msgid "Nom d'utilisateur déjà existant"
+msgstr "This username has already been taken"
+
+#: app/views.py:51 app/views.py:52
+msgid "Nom d'utilisateur ou mot de passe incorect"
+msgstr "Incorrect username or password"
+
+#: food2/settings.py:79
+msgid "English"
+msgstr "English"
+
+#: food2/settings.py:80
+msgid "French"
+msgstr "French"

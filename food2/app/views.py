@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import TemplateView, FormView
+from django.utils.translation import gettext as _
 
 from app.forms import SignUpForm, SignInForm, DefineRecipeForm
 from app.utils import is_daily_recipe_defined_for_user, get_todays_recipe_for_user, format_recipe_steps, \
@@ -30,7 +31,7 @@ class SignUpView(FormView):
                                      password=cleaned_data["password"],
                                      username=cleaned_data["username"])
         except IntegrityError:
-            form.add_error(error="Nom d'utilisateur déjà existant", field="username")
+            form.add_error(error=_("Nom d'utilisateur déjà existant"), field="username")
             return super(SignUpView, self).form_invalid(form)
         return super().form_valid(form)
 
@@ -47,8 +48,8 @@ class SignInView(FormView):
         if user is not None:
             login(self.request, user)
         else:
-            form.add_error(error="Nom d'utilisateur ou mot de passe incorect", field="username")
-            form.add_error(error="Nom d'utilisateur ou mot de passe incorect", field="password")
+            form.add_error(error=_("Nom d'utilisateur ou mot de passe incorect"), field="username")
+            form.add_error(error=_("Nom d'utilisateur ou mot de passe incorect"), field="password")
             return super(SignInView, self).form_invalid(form)
         return super().form_valid(form)
 
