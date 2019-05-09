@@ -4,10 +4,18 @@
         <div class="card-header">
             <h4>Recette du jour</h4>
         </div>
-        <div class="card-body">
+        <div class="card-body row">
             {% if todays_recipe %}
-                <h5 class="card-title">{{ todays_recipe.name }}</h5>
-{#                <p class="card-text">{{ todays_recipe.name }}</p>#}
+                <h5 class="card-title col-md-12 text-center" style="margin-bottom: 70px">{{ todays_recipe.name }}</h5>
+                <div class="col-md-1"></div>
+                <ul class="col-md-4">
+                    {% for detail in recipe_details %}
+                        <li>
+                            {% if detail.quantity %}{{ detail.quantity }}{% endif %}{{ detail.ingredient.name }}
+                        </li>
+                    {% endfor %}
+                </ul>
+                <p class="card-text col-md-7">{{ recipe_steps|linebreaksbr }}</p>
             {% else %}
                 <p class="card-text">Aucune recette trouvée pour aujourd'hui</p>
                 <p>Définissez votre menu pour la semaine</p>

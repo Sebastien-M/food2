@@ -13,3 +13,6 @@ class SignInForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField()
 
+
+class DefineRecipeForm(forms.Form):
+    pass
