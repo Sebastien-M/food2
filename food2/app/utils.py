@@ -2,6 +2,7 @@ import datetime
 from typing import List, Dict, Union
 
 from django.contrib.auth.models import User
+from django.utils.translation import gettext as _
 
 from app.models import DailyRecipe, Recipe
 
@@ -38,31 +39,31 @@ def get_this_week_menu(user: User) -> Dict[str, Dict[str, Union[str, Recipe, dat
     # Here is the date from monday of this week
     day = today - datetime.timedelta(days=today.weekday())
     week_menu = {
-        "Lundi": {
+        _("Lundi"): {
             "date": None,
             "recipe": None
         },
-        "Mardi": {
+        _("Mardi"): {
             "date": None,
             "recipe": None
         },
-        "Mercredi": {
+        _("Mercredi"): {
             "date": None,
             "recipe": None
         },
-        "Jeudi": {
+        _("Jeudi"): {
             "date": None,
             "recipe": None
         },
-        "Vendredi": {
+        _("Vendredi"): {
             "date": None,
             "recipe": None
         },
-        "Samedi": {
+        _("Samedi"): {
             "date": None,
             "recipe": None
         },
-        "Dimanche": {
+        _("Dimanche"): {
             "date": None,
             "recipe": None
         }
@@ -72,17 +73,3 @@ def get_this_week_menu(user: User) -> Dict[str, Dict[str, Union[str, Recipe, dat
         week_menu[week_day]["date"] = day
         day += datetime.timedelta(days=1)
     return week_menu
-
-
-# def get_week_dates(week_menu: Dict[str, Union[Recipe, None]]) -> Dict[str, Union[str, datetime.date]]:
-#     """
-#     Returns a dict containing day names as key and their date correspondence as value
-#     :param week_menu: dict return by get_this_week_menu function
-#     """
-#     week_days = {}
-#     today = datetime.date.today()
-#     day = today - datetime.timedelta(days=today.weekday())
-#     for day_name, value in week_menu.items():
-#         week_days[day_name] = day
-#         day += datetime.timedelta(days=1)
-#     return week_days

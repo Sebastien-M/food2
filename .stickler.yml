@@ -1,0 +1,14 @@
+---
+linters:
+    pep8:
+      max-line-length: 120
+    eslint:
+    csslint:
+
+files:
+    ignore:
+        - 'food2/food2/*'
+        - './Pipfile'
+        - './Pipfile.lock'
+        - './food2/manage.py'
+        - './food2/locale/*'
