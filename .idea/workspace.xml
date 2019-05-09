@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3aa985e8-3392-4c85-a9ca-532fc66d8aef" name="Default" comment="improvements">
+    <list default="true" id="3aa985e8-3392-4c85-a9ca-532fc66d8aef" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.stickler.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food2/app/templates/app/pages/define_recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/food2/app/templates/app/pages/define_recipe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food2/app/templates/app/pages/week_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/food2/app/templates/app/pages/week_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food2/app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/food2/app/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food2/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food2/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food2/food2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/food2/food2/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food2/food2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food2/food2/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -109,11 +104,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="django.po" pinned="false" current-in-tab="true">
+      <file leaf-file-name="django.po" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food2/locale/en/LC_MESSAGES/django.po">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="67" column="14" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
+            <state relative-caret-position="491">
+              <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".stickler.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.stickler.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -138,15 +142,6 @@
                 <element signature="e#817#839#0#HTML" expanded="true" />
                 <element signature="e#622#643#0#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/food2/app/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -250,6 +245,7 @@
         <option value="$PROJECT_DIR$/food2/food2/urls.py" />
         <option value="$PROJECT_DIR$/food2/locale/fr/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/food2/locale/en/LC_MESSAGES/django.po" />
+        <option value="$PROJECT_DIR$/.stickler.yml" />
       </list>
     </option>
   </component>
@@ -300,42 +296,6 @@
               <item name="food" type="462c0819:PsiDirectoryNode" />
               <item name="food2" type="462c0819:PsiDirectoryNode" />
               <item name="food2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="food" type="b2602c69:ProjectViewProjectNode" />
-              <item name="food" type="462c0819:PsiDirectoryNode" />
-              <item name="food2" type="462c0819:PsiDirectoryNode" />
-              <item name="locale" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="food" type="b2602c69:ProjectViewProjectNode" />
-              <item name="food" type="462c0819:PsiDirectoryNode" />
-              <item name="food2" type="462c0819:PsiDirectoryNode" />
-              <item name="locale" type="462c0819:PsiDirectoryNode" />
-              <item name="en" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="food" type="b2602c69:ProjectViewProjectNode" />
-              <item name="food" type="462c0819:PsiDirectoryNode" />
-              <item name="food2" type="462c0819:PsiDirectoryNode" />
-              <item name="locale" type="462c0819:PsiDirectoryNode" />
-              <item name="en" type="462c0819:PsiDirectoryNode" />
-              <item name="LC_MESSAGES" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="food" type="b2602c69:ProjectViewProjectNode" />
-              <item name="food" type="462c0819:PsiDirectoryNode" />
-              <item name="food2" type="462c0819:PsiDirectoryNode" />
-              <item name="locale" type="462c0819:PsiDirectoryNode" />
-              <item name="fr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="food" type="b2602c69:ProjectViewProjectNode" />
-              <item name="food" type="462c0819:PsiDirectoryNode" />
-              <item name="food2" type="462c0819:PsiDirectoryNode" />
-              <item name="locale" type="462c0819:PsiDirectoryNode" />
-              <item name="fr" type="462c0819:PsiDirectoryNode" />
-              <item name="LC_MESSAGES" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -416,7 +376,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557361392888</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added translations">
+      <created>1557363309717</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557363309717</updated>
+    </task>
+    <task id="LOCAL-00005" summary="removed pep8speaks config file">
+      <created>1557363404298</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1557363404298</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -459,7 +433,9 @@
     <MESSAGE value="- Auth user added&#10;- Table name modified&#10;- DailyRecipe view added&#10;- WeekMenu view added" />
     <MESSAGE value="linter added" />
     <MESSAGE value="improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="improvements" />
+    <MESSAGE value="added translations" />
+    <MESSAGE value="removed pep8speaks config file" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed pep8speaks config file" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/food2/app/admin.py">
@@ -735,8 +711,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/food2/locale/en/LC_MESSAGES/django.po">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="67" column="14" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
+        <state relative-caret-position="491">
+          <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.stickler.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
