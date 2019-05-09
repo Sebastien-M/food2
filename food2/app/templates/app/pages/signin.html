@@ -14,8 +14,11 @@
             {% endif %}
             <label for="username">Nom d'utilisateur</label>
 
-            <input type="text" class="form-control" id="username" placeholder=""
-                   name="{{ form.username.name }}" required>
+            <input type="text"
+                   class="form-control"
+                   id="username"
+                   name="{{ form.username.name }}"
+                   value="{{ form.username.value|default_if_none:"" }}" required>
             {% for error in form.username.errors %}
                 <small id="passwordHelpBlock" class="form-text text-muted text-danger">{{ error }}</small>
             {% endfor %}
@@ -27,7 +30,11 @@
                 <div class="form-group">
             {% endif %}
             <label for="password">Mot de passe</label>
-            <input type="password" class="form-control" id="password" name="{{ form.password.name }}">
+            <input type="password"
+                   class="form-control"
+                   id="password"
+                   name="{{ form.password.name }}"
+                   value="{{ form.password.value|default_if_none:"" }}" required>
             {% for error in form.password.errors %}
                 <small id="passwordHelpBlock" class="form-text text-muted text-danger">{{ error }}</small>
             {% endfor %}

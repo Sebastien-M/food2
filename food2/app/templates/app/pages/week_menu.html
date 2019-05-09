@@ -1,15 +1,32 @@
 {% extends "app/index.html" %}
+{% load custom_tags %}
 {% block content %}
-    {#    <h2>Menu de la semaine</h2>#}
 
     <div class="card">
         <div class="card-header">
             <h4>Menu de la semaine</h4>
         </div>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="card-body container row" style="margin-left: 1px;">
+
+            {% for day_name, day_recipe in week_menu.items %}
+                <div class="col-md-6 center-block">
+                    <div class="card bg-light mb-3" style="min-height: 230px;">
+                        <div class="card-header">{{ day_name }}</div>
+                        <div class="card-body">
+                            {% if day_recipe.recipe %}
+                                <h5 class="card-title">{{ day_recipe.recipe.name|capfirst }}</h5>
+{#                                <h5 class="card-title">{{ day_recipe.date }}</h5>#}
+                            {% else %}
+                                <h5 class="card-title" style="color: #6088af">Recette non définie pour ce jour...</h5>
+                                <p class="text-right" style="margin-top: 50px">
+                                    <a href="{% url "define-recipe" year=day_recipe.date.year month=day_recipe.date.month day=day_recipe.date.day %}" class="btn btn-primary">Choisir une recette</a>
+                                </p>
+
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
