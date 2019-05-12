@@ -34,42 +34,56 @@ def format_recipe_steps(recipe: Recipe) -> str:
     return recipe.steps.replace(';', '\n\n')
 
 
-def get_this_week_menu(user: User) -> Dict[str, Dict[str, Union[str, Recipe, datetime.date, None]]]:
+def get_this_week_menu(user: User) -> Dict[str, Dict[str, Union[str, Recipe, None]]]:
     today = datetime.date.today()
     # Here is the date from monday of this week
     day = today - datetime.timedelta(days=today.weekday())
     week_menu = {
         _("Lundi"): {
             "date": None,
-            "recipe": None
+            "recipe": None,
+            "daily_recipe_id": None
         },
         _("Mardi"): {
             "date": None,
-            "recipe": None
+            "recipe": None,
+            "daily_recipe_id": None
         },
         _("Mercredi"): {
             "date": None,
-            "recipe": None
+            "recipe": None,
+            "daily_recipe_id": None
         },
         _("Jeudi"): {
             "date": None,
-            "recipe": None
+            "recipe": None,
+            "daily_recipe_id": None
         },
         _("Vendredi"): {
             "date": None,
-            "recipe": None
+            "recipe": None,
+            "daily_recipe_id": None
         },
         _("Samedi"): {
             "date": None,
-            "recipe": None
+            "recipe": None,
+            "daily_recipe_id": None
         },
         _("Dimanche"): {
             "date": None,
-            "recipe": None
+            "recipe": None,
+            "daily_recipe_id": None
         }
     }
     for week_day, value in week_menu.items():
+        daily_recipe = DailyRecipe.objects.filter(user=user, day=day)
+        if daily_recipe.exists():
+            week_menu[week_day]["daily_recipe_id"] = daily_recipe.get().id
         week_menu[week_day]["recipe"] = get_specific_day_recipe_for_user(user, day)
-        week_menu[week_day]["date"] = day
+        week_menu[week_day]["date"] = str(day)
         day += datetime.timedelta(days=1)
     return week_menu
+
+
+def str_to_date(str_date: str) -> datetime.date:
+    return datetime.datetime.strptime(str_date, '%Y-%m-%d').date()

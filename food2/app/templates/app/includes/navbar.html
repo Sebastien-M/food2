@@ -8,7 +8,7 @@
                 {% if user.is_authenticated %}
                     <li><a href="{% url "daily-recipe" %}">Recette du jour</a></li>
                     <li><a href="{% url "week-menu" %}">Menu de la semaine</a></li>
-                    <li><a href="#fakelink">Liste de courses</a></li>
+                    <li><a href="{% url "shopping-list" %}">Liste de courses</a></li>
                 {% endif %}
             </ul>
 

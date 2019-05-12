@@ -4,23 +4,28 @@
 
     <div class="card">
         <div class="card-header">
-            <h4>{% trans Choisir une recette %}</h4>
+            <h4>{% trans "Choisir une recette" %}</h4>
         </div>
-        <div class="card-body container row" style="height: 100%">
+        <div class="card-body container row" style="margin-left: 1px;">
 
 
             <div class="col-md-6 offset-md-3 center-block">
                 <div class="card bg-light mb-3" style="min-height: 230px;">
                     <div class="card-header">Test</div>
                     <div class="card-body">
-                        <h5 class="card-title" style="color: #6088af">{% trans Recette non définie pour ce jour...%}</h5>
+                        <h5 class="card-title text-center" style="color: #6088af">{{ random_recipe.name|capfirst }}</h5>
                         <div class="row text-center" style="margin-top: 50px;">
-                            <div class="col-md-6">
-                                <a href="#" class="btn btn-danger">{% trans Autre recette%}</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="#" class="btn btn-primary">{% trans Choisir une recette %}</a>
-                            </div>
+                            <form method="post" class="col-md-12 row tex">
+                                {% csrf_token %}
+                                <input type="hidden" name="{{ form.recipe.name }}" value="{{ random_recipe.id }}">
+                                <input type="hidden" name="{{ form.date.name }}" value="{{ date }}">
+                                <div class="col-md-6">
+                                    <button class="btn btn-danger" type=button id="skip-recipe">{% trans "Autre recette" %}</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-primary">{% trans "Choisir cette recette" %}</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -29,6 +34,9 @@
 
         </div>
     </div>
-    </div>
-
+    <script>
+        document.querySelector("#skip-recipe").addEventListener("click", () => {
+            window.location.reload();
+        })
+    </script>
 {% endblock %}
