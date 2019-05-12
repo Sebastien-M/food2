@@ -1,0 +1,19 @@
+{% extends "app/index.html" %}
+{% load i18n %}
+{% block content %}
+
+    <div class="card">
+        <div class="card-header">
+            <h4>{% trans "Modifier élément" %}</h4>
+        </div>
+        <div class="card-body" style="padding: 0">
+            <div class="col-md-12" style="padding: 0;">
+                <form method="post">{% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Update">
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

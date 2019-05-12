@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-09 00:52+0000\n"
+"POT-Creation-Date: 2019-05-10 20:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: app/templates/app/pages/week_menu.html:15
-#, python-format
-msgid "%(day_name)s"
+#: app/templates/app/pages/define_recipe.html:7
+#: app/templates/app/pages/define_recipe.html:22
+msgid "Choisir une recette"
+msgstr ""
+
+#: app/templates/app/pages/define_recipe.html:16
+msgid "Recette non définie pour ce jour..."
+msgstr ""
+
+#: app/templates/app/pages/define_recipe.html:19
+msgid "Autre recette"
+msgstr ""
+
+#: app/templates/app/pages/week_menu.html:8
+msgid "Menu de la semaine"
 msgstr ""
 
 #: app/utils.py:42

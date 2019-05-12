@@ -5,23 +5,37 @@
 
     <div class="card">
         <div class="card-header">
-            <h4>Menu de la semaine</h4>
+            <h4>{% trans "Menu de la semaine" %}</h4>
         </div>
         <div class="card-body container row" style="margin-left: 1px;">
 
             {% for day_name, day_recipe in week_menu.items %}
                 <div class="col-md-6 center-block">
                     <div class="card bg-light mb-3" style="min-height: 230px;">
-                        <div class="card-header">{% blocktrans %}{{ day_name }}{% endblocktrans %}</div>
+                        <div class="card-header">{% trans day_name %} {{ day_recipe.date|recipe_date_str_to_date }}</div>
                         <div class="card-body">
                             {% if day_recipe.recipe %}
-                                <h5 class="card-title">{{ day_recipe.recipe.name|capfirst }}</h5>
-{#                                <h5 class="card-title">{{ day_recipe.date }}</h5>#}
+                                <h5 class="card-title">
+                                    <a href="{% url "recipe-detail" pk=day_recipe.recipe.id %}">
+                                        {{ day_recipe.recipe.name|capfirst }}
+                                    </a>
+                                </h5>
+                                <div class="text-right" style="margin-top: 50px">
+                                <a href="{% url "daily-recipe-delete" pk=day_recipe.daily_recipe_id %}"
+                                       class="btn btn-danger">
+                                        Supprimer recette
+                                    </a>
+                                    <a href="{% url "define-recipe" %}?date={{ day_recipe.date }}"
+                                       class="btn btn-warning">
+                                        Changer de recette
+                                    </a>
+                                </div>
                             {% else %}
                                 <h5 class="card-title" style="color: #6088af">Recette non définie pour ce jour...</h5>
-                                <p class="text-right" style="margin-top: 50px">
-                                    <a href="{% url "define-recipe" year=day_recipe.date.year month=day_recipe.date.month day=day_recipe.date.day %}" class="btn btn-primary">Choisir une recette</a>
-                                </p>
+                                <div class="text-right" style="margin-top: 50px">
+                                    <a href="{% url "define-recipe" %}?date={{ day_recipe.date }}"
+                                       class="btn btn-primary">Choisir une recette</a>
+                                </div>
 
                             {% endif %}
                         </div>

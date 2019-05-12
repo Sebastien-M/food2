@@ -12,6 +12,10 @@ class Recipe(models.Model):
     def __str__(self):
         return self.name
 
+    @staticmethod
+    def get_random_recipe():
+        return Recipe.objects.order_by("?").first()
+
 
 class Ingredient(models.Model):
     name = models.CharField(max_length=100, unique=True, db_index=True)
@@ -51,3 +55,6 @@ class ShoppingListItem(models.Model):
     ingredient = models.CharField(max_length=255)
     quantity = models.CharField(max_length=10, null=True, blank=True)
     bought = models.BooleanField(default=False, blank=True, null=True)
+
+    def is_item_bought(self) -> str:
+        return 'oui' if self.bought else 'non'

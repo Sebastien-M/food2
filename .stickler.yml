@@ -14,3 +14,5 @@ files:
         - './Pipfile.lock'
         - './food2/manage.py'
         - './food2/locale/*'
+        - 'food2/app/static/app/flat-ui/*'
+        - 'food2/app/static/app/bootstrap4/*'

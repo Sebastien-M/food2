@@ -1,0 +1,62 @@
+{% extends "app/index.html" %}
+{% load i18n %}
+{% block content %}
+
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-11">
+                    <h4>{% trans "Liste de courses" %}</h4>
+                </div>
+                <div class="col-md-1">
+                    <a href="{% url "shopping-list-item-create" %}" class="float-md-right btn btn-primary" style="border-radius: 50%">+</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-body" style="padding: 0">
+            <div class="col-md-12" style="padding: 0;">
+
+                <table class="table table-sm" style="font-size: initial">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">{% trans "Quantité" %}</th>
+                        <th scope="col">{% trans "Ingrédient" %}</th>
+                        <th scope="col">{% trans "Acheté" %}</th>
+                        <th scope="col">{% trans "Modifier" %}</th>
+                        <th scope="col">{% trans "Supprimer" %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in object_list %}
+                        <tr class="align-content-center">
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>
+                                {% if item.quantity %}
+                                    {{ item.quantity }}
+                                {% endif %}
+                            </td>
+                            <td>{{ item.ingredient }}</td>
+                            <td>{{ item.is_item_bought }}</td>
+                            <td>
+                                <a href="{% url "shopping-list-item-update" pk=item.id %}"
+                                   class="btn btn-block btn-lg btn-primary">
+                                    <span class="fui-new"></span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url "shopping-list-item-delete" pk=item.id %}"
+                                   class="btn btn-block btn-lg btn-danger">
+                                    <span class="fui-new"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
