@@ -17,4 +17,3 @@ class SignInForm(forms.Form):
 class DefineRecipeForm(forms.Form):
     recipe = forms.CharField()
     date = forms.CharField()
-

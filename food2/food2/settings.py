@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from deploy.secrets_local import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ywqlw$48c5lh#%8v(@u38dqrd3#*p$qr!9c+*1&!dd9!t-mx=n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = SECRETS_DEBUG
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = SECRETS_ALLOWED_HOSTS
 
 
 # Application definition
@@ -89,11 +90,11 @@ WSGI_APPLICATION = 'food2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'food',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': SECRETS_DB_NAME,
+        'USER': SECRETS_DB_USER,
+        'PASSWORD': SECRETS_DB_PASS,
+        'HOST': SECRETS_DB_HOST,
+        'PORT': SECRETS_DB_PORT,
     }
 }
 
@@ -134,4 +135,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = SECRETS_STATIC_URL
