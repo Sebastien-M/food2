@@ -136,3 +136,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = SECRETS_STATIC_URL
+STATIC_ROOT = SECRETS_STATIC_ROOT
