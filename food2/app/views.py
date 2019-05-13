@@ -1,3 +1,5 @@
+import datetime
+
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
@@ -83,6 +85,7 @@ class TodaysRecipeView(LoginRequiredMixin, TemplateView):
     def get_context_data(self, **kwargs):
         context = super(TodaysRecipeView, self).get_context_data(**kwargs)
         context["todays_recipe"] = None
+        context['todays_date'] = datetime.date.today().strftime('%Y-%m-%d')
         if is_daily_recipe_defined_for_user(self.request.user):
             todays_recipe = get_todays_recipe_for_user(self.request.user)
             recipe_details = todays_recipe.ingredient_quantity.all()
