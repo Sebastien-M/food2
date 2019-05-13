@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3aa985e8-3392-4c85-a9ca-532fc66d8aef" name="Default" comment="missing linebreak">
+    <list default="true" id="3aa985e8-3392-4c85-a9ca-532fc66d8aef" name="Default" comment="gitignore update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food2/deploy/secrets_local.py" beforeDir="false" afterPath="$PROJECT_DIR$/food2/deploy/secrets_local.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -320,18 +319,6 @@
               <item name="food" type="462c0819:PsiDirectoryNode" />
               <item name="food2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="food" type="b2602c69:ProjectViewProjectNode" />
-              <item name="food" type="462c0819:PsiDirectoryNode" />
-              <item name="food2" type="462c0819:PsiDirectoryNode" />
-              <item name="deploy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="food" type="b2602c69:ProjectViewProjectNode" />
-              <item name="food" type="462c0819:PsiDirectoryNode" />
-              <item name="food2" type="462c0819:PsiDirectoryNode" />
-              <item name="food2" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -467,7 +454,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557708487736</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="missing linebreak">
+      <created>1557708576550</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1557708576550</updated>
+    </task>
+    <task id="LOCAL-00013" summary="gitignore update">
+      <created>1557708682261</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1557708682261</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -557,7 +558,9 @@
     <MESSAGE value="set highiest value for max line length pep8 linter" />
     <MESSAGE value="added flake8 linter" />
     <MESSAGE value="- added file for secrets&#10;- define missing todays recipe" />
-    <option name="LAST_COMMIT_MESSAGE" value="- added file for secrets&#10;- define missing todays recipe" />
+    <MESSAGE value="missing linebreak" />
+    <MESSAGE value="gitignore update" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -954,22 +957,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food2/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="87" column="33" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/food2/food2/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
           <caret line="137" column="31" selection-start-line="137" selection-start-column="31" selection-end-line="137" selection-end-column="31" />
           <folding>
             <element signature="e#306#315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food2/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="87" column="33" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
