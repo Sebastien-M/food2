@@ -4,6 +4,7 @@
     <list default="true" id="3aa985e8-3392-4c85-a9ca-532fc66d8aef" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/food2.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food2.ini" beforeDir="false" afterPath="$PROJECT_DIR$/food2.ini" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -206,8 +207,8 @@
           <file leaf-file-name="food2.ini" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/food2.ini">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+                <state relative-caret-position="105">
+                  <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -514,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557790689976</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="ini file for uwsgi added">
+      <created>1557865108531</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1557865108531</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -609,7 +617,8 @@
     <MESSAGE value="mysqlclient added in pipfile" />
     <MESSAGE value="base dir secret variable" />
     <MESSAGE value="static root added" />
-    <option name="LAST_COMMIT_MESSAGE" value="static root added" />
+    <MESSAGE value="ini file for uwsgi added" />
+    <option name="LAST_COMMIT_MESSAGE" value="ini file for uwsgi added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1035,8 +1044,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/food2.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="105">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>
