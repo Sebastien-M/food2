@@ -8,6 +8,7 @@ django = "*"
 "beautifulsoup4" = "*"
 requests = "*"
 mysqlclient = "*"
+gunicorn = "*"
 
 [dev-packages]
 
