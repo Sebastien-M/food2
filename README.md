@@ -39,7 +39,7 @@ CREATE DATABASE <db_name>;
 ```
 
 Inside food2/deploy create a file called 'secrets_local.py' and fill the values:
-```
+```python
 import os  
   
 SECRETS_BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  
