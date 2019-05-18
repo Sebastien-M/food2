@@ -187,7 +187,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="secrets_local.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="secrets_local.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/food2/deploy/secrets_local.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="195">
@@ -304,8 +304,6 @@
         <option value="$PROJECT_DIR$/food2/app/views.py" />
         <option value="$PROJECT_DIR$/food2/app/urls.py" />
         <option value="$PROJECT_DIR$/food2.ini" />
-        <option value="$PROJECT_DIR$/food2/food2/settings.py" />
-        <option value="$PROJECT_DIR$/food2/deploy/secrets_local.py" />
         <option value="$PROJECT_DIR$/food2/food2/wsgi.py" />
         <option value="$PROJECT_DIR$/food2/app/templates/app/pages/define_recipe.html" />
         <option value="$PROJECT_DIR$/food2/food2/urls.py" />
@@ -626,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557958371954</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="oops">
+      <created>1557961936916</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1557961936916</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -726,7 +731,8 @@
     <MESSAGE value="added logging settings" />
     <MESSAGE value="removed mistake in define_recipe view and added gunicorn to requirements" />
     <MESSAGE value="updated urls" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated urls" />
+    <MESSAGE value="oops" />
+    <option name="LAST_COMMIT_MESSAGE" value="oops" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1112,16 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food2/food2/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="107" column="40" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="40" />
-          <folding>
-            <element signature="e#306#315#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/food2/app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1138,6 +1134,16 @@
           <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food2/deploy/secrets_local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <element signature="e#306#315#0" expanded="true" />
           </folding>
         </state>
       </provider>
