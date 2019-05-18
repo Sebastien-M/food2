@@ -10,8 +10,8 @@ These instructions will get you a copy of the project up and running on your loc
   
 ### Prerequisites  
   
-To run the project you will need
-* Python (at least 3.5)**
+To run the project you will need:
+* Python (at least 3.5)
 * MySQL or MariaDB
 * (optional) [pipenv](https://docs.pipenv.org/en/latest/) or [virtualenv](https://virtualenv.pypa.io/en/latest/) modules to manage your Python virtualenvs
   
