@@ -20,15 +20,23 @@ To run the project you will need
 A step by step series of examples that tell you how to get a development env running  
   
 Clone the repo:
-`git clone https://github.com/Sebastien-M/food2.git`  
+```
+git clone https://github.com/Sebastien-M/food2.git
+```  
   
 Install requirements:
-`pip install -r Pipfile`  
+```
+pip install -r Pipfile
+```  
 or if you are using pipenv
-`pipenv install`
+```
+pipenv install
+```
 
 Create your database in MySQL/MariaDB:
-`CREATE DATABASE <db_name>;`
+```
+CREATE DATABASE <db_name>;
+```
 
 Inside food2/deploy create a file called 'secrets_local.py' and fill the values:
 ```
@@ -56,10 +64,14 @@ pipenv shell
 at the root of the repository
 
 Run Django migrations:
-`python manage.py food2/manage.py migrate`
+```
+python manage.py food2/manage.py migrate
+```
 
 Create a user to have access to the admin site:
-`python manage.py createsuperuser`
+```
+python manage.py createsuperuser
+```
 
 Run the developpement server:
 ```
@@ -67,7 +79,9 @@ python manage.py runserver
 ```
 
 The project also comes with a custom command to populate the database with recipes and their ingredients:
-`python manage.py fill database <ingredient_name>`
+```
+python manage.py fill database <ingredient_name>
+```
 You can pass multiple ingredients names separated with a space.
 This command will scrap [marmiton](https://marmiton.org) website and search for recipes with specified ingredients
 
@@ -91,7 +105,7 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available, s
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
