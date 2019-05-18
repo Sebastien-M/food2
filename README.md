@@ -50,7 +50,9 @@ SECRETS_SECRET_KEY 		= <span style="color:red">'your secret key'</span>
 
 Start your virtualenv if you are using one
 If you are using pipenv:
-`pipenv shell` 
+```
+pipenv shell
+``` 
 at the root of the repository
 
 Run Django migrations:
@@ -60,7 +62,9 @@ Create a user to have access to the admin site:
 `python manage.py createsuperuser`
 
 Run the developpement server:
-```python manage.py runserver```
+```
+python manage.py runserver
+```
 
 The project also comes with a custom command to populate the database with recipes and their ingredients:
 `python manage.py fill database <ingredient_name>`
