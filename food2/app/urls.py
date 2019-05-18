@@ -1,13 +1,14 @@
 from django.urls import path, re_path
 from app.views import IndexView, SignUpView, SignInView, LogoutView, WeekMenuView, TodaysRecipeView, DefineRecipeView, \
     ShoppingListView, ShoppingListItemUpdateView, ShoppingListItemCreateView, ShoppingListItemDeleteView, \
-    RecipeDetailView, DailyRecipeDeleteView
+    RecipeDetailView, DailyRecipeDeleteView, ChangeLanguageView
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('signup/', SignUpView.as_view(), name='signup'),
     path('signin/', SignInView.as_view(), name='signin'),
     path('logout/', LogoutView.as_view(), name='logout'),
+    path('language/<str:lang>', ChangeLanguageView.as_view(), name='change-language'),
     path('recipe/<int:pk>/', RecipeDetailView.as_view(), name='recipe-detail'),
     path('daily-recipe/', TodaysRecipeView.as_view(), name='daily-recipe'),
     path('daily-recipe/delete/<int:pk>/', DailyRecipeDeleteView.as_view(), name='daily-recipe-delete'),
