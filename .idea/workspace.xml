@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3aa985e8-3392-4c85-a9ca-532fc66d8aef" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -87,7 +87,7 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/food2/app/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="750">
+                <state relative-caret-position="550">
                   <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
@@ -99,7 +99,7 @@
           <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/food2/app/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="257">
+                <state relative-caret-position="-749">
                   <caret line="108" selection-start-line="108" selection-end-line="108" />
                 </state>
               </provider>
@@ -129,23 +129,24 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/food2/food2/settings.py">
+          <file leaf-file-name="shopping_list_item_update_form.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/food2/app/templates/app/pages/shopping_list_item_update_form.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="538">
-                  <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+                <state relative-caret-position="195">
+                  <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
                   <folding>
-                    <element signature="e#306#315#0" expanded="true" />
+                    <element signature="e#223#241#0#HTML" expanded="true" />
+                    <element signature="e#278#297#0#HTML" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="780">
-                  <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+                <state relative-caret-position="692">
+                  <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -164,18 +165,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="360">
                   <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/food2/app/utils.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1230">
-                  <caret line="88" column="11" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="66" />
-                  <folding>
-                    <element signature="e#0#15#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -221,6 +210,15 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="195">
                   <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="signin.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/food2/app/templates/app/pages/signin.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="22" selection-start-column="22" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -305,13 +303,11 @@
         <option value="$PROJECT_DIR$/food2/app/templates/app/pages/daily_recipe.html" />
         <option value="$PROJECT_DIR$/food2/app/views.py" />
         <option value="$PROJECT_DIR$/food2/app/urls.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/food2.ini" />
         <option value="$PROJECT_DIR$/food2/food2/wsgi.py" />
         <option value="$PROJECT_DIR$/food2/app/templates/app/pages/define_recipe.html" />
         <option value="$PROJECT_DIR$/food2/food2/urls.py" />
-        <option value="$PROJECT_DIR$/food2/deploy/secrets_local.py" />
-        <option value="$PROJECT_DIR$/food2/food2/settings.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -354,7 +350,46 @@
               <item name="food" type="b2602c69:ProjectViewProjectNode" />
               <item name="food" type="462c0819:PsiDirectoryNode" />
               <item name="food2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="food" type="b2602c69:ProjectViewProjectNode" />
+              <item name="food" type="462c0819:PsiDirectoryNode" />
               <item name="food2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="food" type="b2602c69:ProjectViewProjectNode" />
+              <item name="food" type="462c0819:PsiDirectoryNode" />
+              <item name="food2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="food" type="b2602c69:ProjectViewProjectNode" />
+              <item name="food" type="462c0819:PsiDirectoryNode" />
+              <item name="food2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="food" type="b2602c69:ProjectViewProjectNode" />
+              <item name="food" type="462c0819:PsiDirectoryNode" />
+              <item name="food2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="food" type="b2602c69:ProjectViewProjectNode" />
+              <item name="food" type="462c0819:PsiDirectoryNode" />
+              <item name="food2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -613,7 +648,7 @@
       <window_info anchor="right" id="Remote Host" order="3" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18597998" />
       <window_info anchor="bottom" id="Docker" order="7" />
-      <window_info anchor="right" id="Database" order="3" weight="0.23319027" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.17381974" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -901,8 +936,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/food2/app/templates/app/pages/signin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="68" />
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -979,8 +1014,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/food2/app/templates/app/pages/shopping_list_item_update_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        <state relative-caret-position="195">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
           <folding>
             <element signature="e#223#241#0#HTML" expanded="true" />
             <element signature="e#278#297#0#HTML" expanded="true" />
@@ -1026,7 +1061,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/food2/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
+        <state relative-caret-position="550">
           <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -1036,8 +1071,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+        <state relative-caret-position="692">
+          <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1045,6 +1080,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food2/deploy/secrets_local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1071,7 +1113,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/food2/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
+        <state relative-caret-position="-749">
           <caret line="108" selection-start-line="108" selection-end-line="108" />
         </state>
       </provider>
@@ -1098,15 +1140,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/food2/deploy/secrets_local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food2/food2/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+        <state relative-caret-position="90">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding>
             <element signature="e#306#315#0" expanded="true" />
           </folding>

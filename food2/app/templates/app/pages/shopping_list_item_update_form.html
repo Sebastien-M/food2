@@ -6,11 +6,80 @@
         <div class="card-header">
             <h4>{% trans "Modifier élément" %}</h4>
         </div>
-        <div class="card-body" style="padding: 0">
-            <div class="col-md-12" style="padding: 0;">
-                <form method="post">{% csrf_token %}
-                    {{ form.as_p }}
-                    <input type="submit" value="Update">
+        <div class="card-body text-center" style="padding: 0">
+            <div class="col-md-12 center-block" style="padding: 0;">
+
+                {#                <form method="post">#}
+                {#                    {% csrf_token %}#}
+                {#                    <label for="ingredient">{% trans "Ingrédient" %}</label>#}
+                {#                    <input type="text"#}
+                {#                           class="form-control"#}
+                {#                           id="ingredient"#}
+                {#                           name="{{ form.ingredient.name }}"#}
+                {#                           value="{{ form.ingredient.value|default_if_none:"" }}" required>#}
+                {#                    {{ form }}#}
+                {#                    <input type="submit" value="Update">#}
+                {#                </form>#}
+
+
+                <form method="post">
+                    {% csrf_token %}
+
+                    {% if form.ingredient.errors %}
+                        <div class="form-group has-error">
+                    {% else %}
+                        <div class="form-group">
+                    {% endif %}
+                    <label for="ingredient">{% trans "Ingrédient" %}</label>
+
+                    <input type="text"
+                           class="form-control"
+                           id="ingredient"
+                           name="{{ form.ingredient.name }}"
+                           value="{{ form.ingredient.value|default_if_none:"" }}" required>
+                    {% for error in form.ingredient.errors %}
+                        <small id="passwordHelpBlock" class="form-text text-muted text-danger">{{ error }}</small>
+                    {% endfor %}
+                    </div>
+
+                    {% if form.quantity.errors %}
+                        <div class="form-group has-error">
+                    {% else %}
+                        <div class="form-group">
+                    {% endif %}
+                    <label for="quantity">{% trans "Quantité" %}</label>
+                    <input type="number"
+                           step="0.01"
+                           class="form-control"
+                           id="quantity"
+                           name="{{ form.quantity.name }}"
+                           value="{{ form.quantity.value|default_if_none:"" }}" required>
+                    {% for error in form.quantity.errors %}
+                        <small id="passwordHelpBlock" class="form-text text-muted text-danger">{{ error }}</small>
+                    {% endfor %}
+                    </div>
+
+                    {% if form.bought.errors %}
+                        <div class="form-group has-error">
+                    {% else %}
+                        <div class="form-group">
+                    {% endif %}
+                    <label for="bought">{% trans "Acheté" %}</label>
+
+                    <select class="form-control" name="{{ form.bought.name }}" id="bought">
+                        {% for select in form.bought %}
+                                {{ select }}
+                        {% endfor %}
+                    </select>
+
+
+
+                    {% for error in form.bought.errors %}
+                        <small id="passwordHelpBlock" class="form-text text-muted text-danger">{{ error }}</small>
+                    {% endfor %}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
                 </form>
 
             </div>
