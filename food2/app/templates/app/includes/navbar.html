@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <nav class="navbar navbar-inverse navbar-embossed navbar-expand-lg" role="navigation">
     <div class="container">
         <a class="navbar-brand" href="{% url 'index' %}">Food2</a>
@@ -6,21 +8,26 @@
         <div class="collapse navbar-collapse" id="navbar-collapse-01">
             <ul class="nav navbar-nav mr-auto col-md-8">
                 {% if user.is_authenticated %}
-                    <li><a href="{% url "daily-recipe" %}">Recette du jour</a></li>
-                    <li><a href="{% url "week-menu" %}">Menu de la semaine</a></li>
-                    <li><a href="{% url "shopping-list" %}">Liste de courses</a></li>
+                    <li><a href="{% url "daily-recipe" %}">{% trans "Recette du jour" %}</a></li>
+                    <li><a href="{% url "week-menu" %}">{% trans "Menu de la semaine" %}</a></li>
+                    <li><a href="{% url "shopping-list" %}">{% trans "Liste de courses" %}</a></li>
                 {% endif %}
             </ul>
 
-            <li class="row">
+            <div class="row">
                 {% if user.is_authenticated %}
-                    <li><a href="{% url "logout" %}">Se déconnecter</a></li>
+                    <li><a href="{% url "logout" %}">{% trans "Se déconnecter" %}</a></li>
                 {% else %}
-                    <li><a href="{% url "signin" %}">Se connecter</a></li>
-                    <li><a href="{% url "signup" %}">Créer un compte</a></li>
+                    <li><a href="{% url "signin" %}">{% trans "Se connecter" %}</a></li>
+                    <li><a href="{% url "signup" %}">{% trans "Créer un compte" %}</a></li>
                 {% endif %}
 
-            </li>
+                <li><a href="{% url "change-language" lang='en' %}"><span
+                        class="flag-icon flag-icon-us flag-icon-squared"></span></a></li>
+                <li><a href="{% url "change-language" lang='fr' %}"><span
+                        class="flag-icon flag-icon-fr flag-icon-squared"></span></a></li>
+
+            </div>
 
         </div>
     </div>

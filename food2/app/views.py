@@ -5,7 +5,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.http import HttpResponseRedirect
+from django.shortcuts import redirect
 from django.urls import reverse_lazy
+from django.utils import translation
 from django.views import View
 from django.views.generic import TemplateView, FormView, ListView, UpdateView, CreateView, DeleteView, DetailView
 from django.utils.translation import gettext as _
@@ -204,3 +206,14 @@ class DailyRecipeDeleteView(LoginRequiredMixin, DeleteView):
 
     def get(self, request, *args, **kwargs):
         return self.post(request, *args, **kwargs)
+
+
+class ChangeLanguageView(View):
+
+    def get(self, request, *args, **kwargs):
+        user_language = kwargs.get('lang')
+        # TODO: use enum for languages
+        if user_language in ['en', 'fr']:
+            translation.activate(user_language)
+            request.session[translation.LANGUAGE_SESSION_KEY] = user_language
+        return redirect(reverse_lazy('week-menu'))

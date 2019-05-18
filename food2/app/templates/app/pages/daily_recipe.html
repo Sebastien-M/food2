@@ -1,8 +1,10 @@
 {% extends "app/index.html" %}
+{% load i18n %}
+
 {% block content %}
     <div class="card">
         <div class="card-header">
-            <h4>Recette du jour</h4>
+            <h4>{% trans "Recette du jour" %}</h4>
         </div>
         <div class="card-body">
             {% if todays_recipe %}
@@ -17,8 +19,8 @@
                 </ul>
                 <p class="card-text col-md-7">{{ recipe_steps|linebreaksbr }}</p>
             {% else %}
-                <p class="card-text">Aucune recette trouvée pour aujourd'hui</p>
-                <a href="{% url "define-recipe" %}?date={{ todays_date }}" class="btn btn-primary">Définir</a>
+                <p class="card-text">{% trans "Aucune recette trouvée pour aujourd'hui" %}</p>
+                <a href="{% url "define-recipe" %}?date={{ todays_date }}" class="btn btn-primary">{% trans "Définir" %}</a>
             {% endif %}
         </div>
     </div>

@@ -1,16 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
+# English translations.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# MANDABA SEBASTIEN <seb.mandaba@gmail.com>, 2019.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-10 20:17+0000\n"
+"POT-Creation-Date: 2019-05-18 13:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: MANDABA Sébastien seb.mandaba@gmail.com\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -18,63 +18,173 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: app/templates/app/pages/define_recipe.html:7
-#: app/templates/app/pages/define_recipe.html:22
-msgid "Choisir une recette"
-msgstr ""
+#: food2/app/templates/app/includes/navbar.html:11
+#: food2/app/templates/app/pages/daily_recipe.html:7
+msgid "Recette du jour"
+msgstr "Today's Recipe"
 
-#: app/templates/app/pages/define_recipe.html:16
-msgid "Recette non définie pour ce jour..."
-msgstr ""
-
-#: app/templates/app/pages/define_recipe.html:19
-msgid "Autre recette"
-msgstr ""
-
-#: app/templates/app/pages/week_menu.html:8
+#: food2/app/templates/app/includes/navbar.html:12
+#: food2/app/templates/app/pages/week_menu.html:8
 msgid "Menu de la semaine"
-msgstr ""
+msgstr "Menu of this week"
 
-#: app/utils.py:42
+#: food2/app/templates/app/includes/navbar.html:13
+#: food2/app/templates/app/pages/shopping_list.html:9
+msgid "Liste de courses"
+msgstr "Shopping List"
+
+#: food2/app/templates/app/includes/navbar.html:19
+msgid "Se déconnecter"
+msgstr "Disconnect"
+
+#: food2/app/templates/app/includes/navbar.html:21
+#: food2/app/templates/app/pages/signin.html:10
+msgid "Se connecter"
+msgstr "Sign In"
+
+#: food2/app/templates/app/includes/navbar.html:22
+#: food2/app/templates/app/pages/signup.html:9
+msgid "Créer un compte"
+msgstr "Sign Up"
+
+#: food2/app/templates/app/pages/daily_recipe.html:22
+msgid "Aucune recette trouvée pour aujourd'hui"
+msgstr "No recipe found for today"
+
+#: food2/app/templates/app/pages/daily_recipe.html:23
+msgid "Définir"
+msgstr "Define"
+
+#: food2/app/templates/app/pages/define_recipe.html:7
+#: food2/app/templates/app/pages/week_menu.html:37
+msgid "Choisir une recette"
+msgstr "Choose a recipe"
+
+#: food2/app/templates/app/pages/define_recipe.html:23
+msgid "Autre recette"
+msgstr "Other recipe"
+
+#: food2/app/templates/app/pages/define_recipe.html:26
+msgid "Choisir cette recette"
+msgstr "Choose this recipe"
+
+#: food2/app/templates/app/pages/shopping_list.html:24
+#: food2/app/templates/app/pages/shopping_list_item_update_form.html:37
+msgid "Quantité"
+msgstr "Quantity"
+
+#: food2/app/templates/app/pages/shopping_list.html:25
+#: food2/app/templates/app/pages/shopping_list_item_update_form.html:20
+msgid "Ingrédient"
+msgstr "Ingredient"
+
+#: food2/app/templates/app/pages/shopping_list.html:26
+#: food2/app/templates/app/pages/shopping_list_item_update_form.html:54
+msgid "Acheté"
+msgstr "Bought"
+
+#: food2/app/templates/app/pages/shopping_list.html:27
+msgid "Modifier"
+msgstr "Modify"
+
+#: food2/app/templates/app/pages/shopping_list.html:28
+msgid "Supprimer"
+msgstr "Delete"
+
+#: food2/app/templates/app/pages/shopping_list_item_create_form.html:7
+msgid "Ajouter un article à la liste"
+msgstr "Add an item to the list"
+
+#: food2/app/templates/app/pages/shopping_list_item_update_form.html:7
+msgid "Modifier élément"
+msgstr "Modify element"
+
+#: food2/app/templates/app/pages/shopping_list_item_update_form.html:69
+#: food2/app/templates/app/pages/signin.html:45
+#: food2/app/templates/app/pages/signup.html:84
+msgid "Envoyer"
+msgstr "Send"
+
+#: food2/app/templates/app/pages/signin.html:17
+#: food2/app/templates/app/pages/signup.html:54
+msgid "Nom d'utilisateur"
+msgstr "Username"
+
+#: food2/app/templates/app/pages/signin.html:34
+#: food2/app/templates/app/pages/signup.html:72
+msgid "Mot de passe"
+msgstr "Password"
+
+#: food2/app/templates/app/pages/signup.html:12
+#: food2/app/templates/app/pages/signup.html:16
+msgid "Prénom"
+msgstr "First name"
+
+#: food2/app/templates/app/pages/signup.html:25
+msgid "Nom"
+msgstr "Last Name"
+
+#: food2/app/templates/app/pages/signup.html:36
+msgid "Email"
+msgstr "Email"
+
+#: food2/app/templates/app/pages/week_menu.html:26
+msgid "Supprimer recette"
+msgstr "Delete this recipe"
+
+#: food2/app/templates/app/pages/week_menu.html:30
+msgid "Changer de recette"
+msgstr "Change recipe"
+
+#: food2/app/templates/app/pages/week_menu.html:34
+msgid "Recette non définie pour ce jour"
+msgstr "No recipe found for this day"
+
+#: food2/app/utils.py:42
 msgid "Lundi"
 msgstr "Monday"
 
-#: app/utils.py:46
+#: food2/app/utils.py:47
 msgid "Mardi"
 msgstr "Tuesday"
 
-#: app/utils.py:50
+#: food2/app/utils.py:52
 msgid "Mercredi"
 msgstr "Wednesday"
 
-#: app/utils.py:54
+#: food2/app/utils.py:57
 msgid "Jeudi"
 msgstr "Thursday"
 
-#: app/utils.py:58
+#: food2/app/utils.py:62
 msgid "Vendredi"
 msgstr "Friday"
 
-#: app/utils.py:62
+#: food2/app/utils.py:67
 msgid "Samedi"
 msgstr "Saturday"
 
-#: app/utils.py:66
+#: food2/app/utils.py:72
 msgid "Dimanche"
 msgstr "Sunday"
 
-#: app/views.py:34
+#: food2/app/views.py:39
 msgid "Nom d'utilisateur déjà existant"
 msgstr "This username has already been taken"
 
-#: app/views.py:51 app/views.py:52
+#: food2/app/views.py:56 food2/app/views.py:57
 msgid "Nom d'utilisateur ou mot de passe incorect"
 msgstr "Incorrect username or password"
 
-#: food2/settings.py:79
+#: food2/food2/settings.py:81
 msgid "English"
 msgstr "English"
 
-#: food2/settings.py:80
+#: food2/food2/settings.py:82
 msgid "French"
 msgstr "French"
+
+#, fuzzy
+#~| msgid "Nom d'utilisateur déjà existant"
+#~ msgid "Nom d\\'utilisateur"
+#~ msgstr "Username"

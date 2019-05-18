@@ -9,19 +9,6 @@
         <div class="card-body text-center" style="padding: 0">
             <div class="col-md-12 center-block" style="padding: 0;">
 
-                {#                <form method="post">#}
-                {#                    {% csrf_token %}#}
-                {#                    <label for="ingredient">{% trans "Ingrédient" %}</label>#}
-                {#                    <input type="text"#}
-                {#                           class="form-control"#}
-                {#                           id="ingredient"#}
-                {#                           name="{{ form.ingredient.name }}"#}
-                {#                           value="{{ form.ingredient.value|default_if_none:"" }}" required>#}
-                {#                    {{ form }}#}
-                {#                    <input type="submit" value="Update">#}
-                {#                </form>#}
-
-
                 <form method="post">
                     {% csrf_token %}
 
@@ -79,7 +66,7 @@
                     {% endfor %}
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                    <button type="submit" class="btn btn-primary">{% trans "Envoyer" %}</button>
                 </form>
 
             </div>

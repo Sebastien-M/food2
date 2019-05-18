@@ -1,18 +1,19 @@
 {% extends "app/index.html" %}
+{% load i18n %}
 {% block content %}
 
     <div class="col-md-8 offset-md-2 text-center center-block" id="account_creatrion_form" style="height: 100%">
 
         <form method="post">
             {% csrf_token %}
-            <h1 class="h3 mb-3 font-weight-normal">Créer un compte</h1>
+            <h1 class="h3 mb-3 font-weight-normal">{% trans "Créer un compte" %}</h1>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="first_name">Prénom</label>
+                    <label for="first_name">{% trans "Prénom" %}</label>
                     <input type="text"
                            class="form-control"
                            id="first_name"
-                           placeholder="Prénom"
+                           placeholder="{% trans "Prénom" %}"
                            name="{{ form.first_name.name }}"
                            value="{{ form.first_name.value|default_if_none:"" }}" required>
                 </div>
@@ -21,7 +22,7 @@
                     <input type="text"
                            class="form-control"
                            id="last_name"
-                           placeholder="Nom"
+                           placeholder="{% trans "Nom" %}"
                            name="{{ form.last_name.name }}"
                            value="{{ form.last_name.value|default_if_none:"" }}" required>
                 </div>
@@ -32,7 +33,7 @@
             {% else %}
                 <div class="form-group">
             {% endif %}
-            <label for="email">Email</label>
+            <label for="email">{% trans "Email" %}</label>
 
             <input type="email"
                    class="form-control"
@@ -50,7 +51,7 @@
             {% else %}
                 <div class="form-group">
             {% endif %}
-            <label for="username">Nom d'utilisateur</label>
+            <label for="username">{% trans "Nom d'utilisateur" %}</label>
 
             <input type="text"
                    class="form-control"
@@ -68,7 +69,7 @@
             {% else %}
                 <div class="form-group">
             {% endif %}
-            <label for="password">Mot de passe</label>
+            <label for="password">{% trans "Mot de passe" %}</label>
             <input type="password"
                    class="form-control"
                    id="password"
@@ -80,7 +81,7 @@
             {% endfor %}
             </div>
 
-            <button type="submit" class="btn btn-primary">Envoyer</button>
+            <button type="submit" class="btn btn-primary">{% trans "Envoyer" %}</button>
         </form>
 
     </div>
