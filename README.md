@@ -65,7 +65,7 @@ Run the developpement server:
 The project also comes with a custom command to populate the database with recipes and their ingredients:
 `python manage.py fill database <ingredient_name>`
 You can pass multiple ingredients names separated with a space.
-This command will scrap [marmiton](marmiton.org) website and search for recipes with specified ingredients
+This command will scrap [marmiton](https://marmiton.org) website and search for recipes with specified ingredients
 
 ## Running the tests
 
@@ -83,11 +83,11 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available, s
 
 ## Authors
 
-* **Sébastien Mandaba** - *Initial work* - [github](https://github.com/PurpleBooth)
+* **Sébastien Mandaba** - *Initial work* - [github](https://github.com/Sebastien-M)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
 
 ## Acknowledgments
 
