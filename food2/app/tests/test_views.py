@@ -1,7 +1,6 @@
-from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.test import Client, TestCase
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse_lazy
 
 
 class ViewsTestCase(TestCase):
@@ -68,4 +67,3 @@ class ViewsTestCase(TestCase):
         # redirection lo signin view when not logged in
         self.assertFalse(response.context['user'].is_authenticated)
         self.assertEqual(response.request['PATH_INFO'], reverse_lazy('signin'))
-
