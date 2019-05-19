@@ -2,20 +2,23 @@
 {% load i18n %}
 {% block content %}
 
-    <div class="card">
-        <div class="card-header">
-            <h4>{% trans "Modifier élément" %}</h4>
+
+    <div class="card" style="margin-top: 20vh">
+        <div class="card-header center-align" style="padding-top: 20px">
+            <h4 class="center-block">{% trans "Modifier élément" %}</h4>
         </div>
-        <div class="card-body text-center" style="padding: 0">
-            <div class="col-md-12 center-block" style="padding: 0;">
+        <div class="card-content center-align">
+            <div class="card-action">
+                <h5 class="text-center amber-text text-darken-1"
+                    style="color: #6088af">{{ random_recipe.name|capfirst }}</h5>
 
                 <form method="post">
                     {% csrf_token %}
 
                     {% if form.ingredient.errors %}
-                        <div class="form-group has-error">
+                        <div class="input-field has-error">
                     {% else %}
-                        <div class="form-group">
+                        <div class="input-field">
                     {% endif %}
                     <label for="ingredient">{% trans "Ingrédient" %}</label>
 
@@ -30,9 +33,9 @@
                     </div>
 
                     {% if form.quantity.errors %}
-                        <div class="form-group has-error">
+                        <div class="input-field has-error">
                     {% else %}
-                        <div class="form-group">
+                        <div class="input-field">
                     {% endif %}
                     <label for="quantity">{% trans "Quantité" %}</label>
                     <input type="number"
@@ -47,19 +50,17 @@
                     </div>
 
                     {% if form.bought.errors %}
-                        <div class="form-group has-error">
+                        <div class="input-field has-error">
                     {% else %}
-                        <div class="form-group">
+                        <div class="input-field">
                     {% endif %}
-                    <label for="bought">{% trans "Acheté" %}</label>
 
                     <select class="form-control" name="{{ form.bought.name }}" id="bought">
                         {% for select in form.bought %}
-                                {{ select }}
+                            {{ select }}
                         {% endfor %}
                     </select>
-
-
+                    <label for="bought">{% trans "Acheté" %}</label>
 
                     {% for error in form.bought.errors %}
                         <small id="passwordHelpBlock" class="form-text text-muted text-danger">{{ error }}</small>

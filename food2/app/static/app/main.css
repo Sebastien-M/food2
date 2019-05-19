@@ -1,8 +1,8 @@
-#navbrand, .nav-item{
+.navbrand, .nav-item{
     transition: .3s;
 }
 
-#navbrand:hover{
+.navbrand:hover{
     color: #FFB300;
 }
 

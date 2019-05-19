@@ -1,20 +1,29 @@
 {% extends "app/index.html" %}
+{% load i18n %}
 {% block content %}
+
     <div class="card">
-        <div class="card-header">
+        <div class="card-header center-align" style="padding-top: 20px">
             <h4>{{ object.name|capfirst }}</h4>
         </div>
-        <div class="card-body row">
-            <h5 class="card-title col-md-12 text-center">{{ object.recipe.name }}</h5>
-            <div class="col-md-1"></div>
-            <ul class="col-md-4">
-                {% for detail in recipe_details %}
-                    <li>
-                        {% if detail.quantity %}{{ detail.quantity }}{% endif %}{{ detail.ingredient.name }}
-                    </li>
-                {% endfor %}
-            </ul>
-            <p class="card-text col-md-7">{{ recipe_steps|linebreaksbr }}</p>
+        <div class="card-content container-fluid row">
+            <div class="card-action">
+                <div class="col m6">
+                    <h5>{% trans "Ingrédients" %}</h5>
+                    <ul class="collection">
+                        {% for detail in recipe_details %}
+                            <li class="collection-item">
+                                {% if detail.quantity %}{{ detail.quantity }}{% endif %}{{ detail.ingredient.name }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col m6">
+                    <h5>{% trans "Etapes" %}</h5>
+                    <p>{{ recipe_steps|linebreaksbr }}</p>
+                </div>
+            </div>
         </div>
     </div>
+
 {% endblock %}

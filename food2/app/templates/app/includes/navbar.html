@@ -2,7 +2,7 @@
 
 <nav class="grey darken-4">
     <div class="nav-wrapper container">
-        <a id="navbrand" href="{% url 'index' %}" class="brand-logo">Food2</a>
+        <a href="{% url 'index' %}" class="brand-logo navbrand">Food2</a>
         <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
             {% if user.is_authenticated %}

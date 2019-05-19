@@ -2,36 +2,32 @@
 {% load i18n %}
 {% block content %}
 
-    <div class="card">
-        <div class="card-header">
-            <h4>{% trans "Choisir une recette" %}</h4>
+    <div class="card" style="margin-top: 20vh">
+        <div class="card-header center-align" style="padding-top: 20px">
+            <h4 class="center-block">{% trans "Choisir une recette" %}</h4>
         </div>
-        <div class="card-body container row" style="margin-left: 1px;">
-
-
-            <div class="col-md-6 offset-md-3 center-block">
-                <div class="card bg-light mb-3" style="min-height: 230px;">
-                    <div class="card-header">{{ date }}</div>
-                    <div class="card-body">
-                        <h5 class="card-title text-center" style="color: #6088af">{{ random_recipe.name|capfirst }}</h5>
-                        <div class="row text-center" style="margin-top: 50px;">
-                            <form method="post" class="col-md-12 row tex">
-                                {% csrf_token %}
-                                <input type="hidden" name="{{ form.recipe.name }}" value="{{ random_recipe.id }}">
-                                <input type="hidden" name="{{ form.date.name }}" value="{{ date }}">
-                                <div class="col-md-6">
-                                    <button class="btn btn-danger" type=button id="skip-recipe">{% trans "Autre recette" %}</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button class="btn btn-primary">{% trans "Choisir cette recette" %}</button>
-                                </div>
-                            </form>
+        <div class="card-content center-align">
+            <div class="card-action">
+                <h5 class="text-center amber-text text-darken-1" style="color: #6088af">{{ random_recipe.name|capfirst }}</h5>
+                <form method="post" class="row tex">
+                    {% csrf_token %}
+                    <input type="hidden" name="{{ form.recipe.name }}" value="{{ random_recipe.id }}">
+                    <input type="hidden" name="{{ form.date.name }}" value="{{ date }}">
+                    <div class="col m6 offset-m3 s12" style="margin-top: 50px;">
+                        <div class="col s6">
+                            <button type="button" id="skip-recipe"
+                                    class="btn-large btn-floating btn-large waves-effect waves-light red">
+                                <i class="material-icons">close</i>
+                            </button>
+                        </div>
+                        <div class="col s6">
+                            <button class="btn-large btn-floating btn-large waves-effect waves-light green">
+                                <i class="material-icons">check</i>
+                            </button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
-
-
         </div>
     </div>
     <script>
