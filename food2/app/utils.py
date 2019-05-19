@@ -14,11 +14,14 @@ def is_daily_recipe_defined_for_user(user: User) -> bool:
     return DailyRecipe.objects.filter(user=user, day=datetime.date.today()).exists()
 
 
-def get_todays_recipe_for_user(user: User) -> Recipe:
+def get_todays_recipe_for_user(user: User) -> Union[Recipe, None]:
     """
     Returns today's recipe for a user
     """
-    daily_recipe = DailyRecipe.objects.get(user=user, day=datetime.date.today())
+    try:
+        daily_recipe = DailyRecipe.objects.get(user=user, day=datetime.date.today())
+    except DailyRecipe.DoesNotExist:
+        return None
     return daily_recipe.recipe
 
 
