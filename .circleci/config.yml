@@ -12,6 +12,14 @@ jobs:
         environment:
           PIPENV_VENV_IN_PROJECT: true
 
+      - image: "mariadb:10.2.12"
+        environment:
+          MYSQL_DATABASE: "food"
+          MYSQL_USER: "root"
+          MYSQL_ROOT_PASSWORD: "root"
+          MYSQL_HOST: "127.0.0.1"
+
+
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -35,11 +43,11 @@ jobs:
             sudo pip install pipenv
             pipenv install
 
-
-#      - save_cache:
-#          paths:
-#            - ./venv
-#          key: v1-dependencies-{{ checksum "requirements.txt" }}
+      - run:
+          name: upload secrets
+          command: |
+            touch food2/deploy/secrets_local.py
+            echo ${secrets_file} | base64 -d > food2/deploy/secrets_local.py
 
       # run tests!
       # this example uses Django's built-in test-runner
@@ -47,24 +55,14 @@ jobs:
       # https://pytest.org
       # https://nose.readthedocs.io
       - run:
+          name: "Wait for database to be available"
+          command: "dockerize -wait tcp://127.0.0.1:3306 -timeout 1m"
+
+      - run:
           name: run tests
           command: |
             cd food2
-            touch deploy/secrets_local.py
-            echo 'import os' >> deploy/secrets_local.py
-            echo 'SECRETS_BASE_DIR = ${SECRETS_BASE_DIR}' >> deploy/secrets_local.py
-            echo 'SECRETS_ALLOWED_HOSTS = ${SECRETS_ALLOWED_HOSTS}' >> deploy/secrets_local.py
-            echo 'SECRETS_DB_NAME = ${SECRETS_DB_NAME}' >> deploy/secrets_local.py
-            echo 'SECRETS_DB_USER = ${SECRETS_DB_USER}' >> deploy/secrets_local.py
-            echo 'SECRETS_DB_PASS = ${SECRETS_DB_PASS}' >> deploy/secrets_local.py
-            echo 'SECRETS_DB_HOST = ${SECRETS_DB_HOST}' >> deploy/secrets_local.py
-            echo 'SECRETS_DB_PORT = ${SECRETS_DB_PORT}' >> deploy/secrets_local.py
-            echo 'SECRETS_DEBUG = ${SECRETS_DEBUG}' >> deploy/secrets_local.py
-            echo 'SECRETS_STATIC_URL = ${SECRETS_STATIC_URL}' >> deploy/secrets_local.py
-            echo 'SECRETS_STATIC_ROOT = ${SECRETS_STATIC_ROOT}' >> deploy/secrets_local.py
-            echo 'SECRETS_LOG_PATH = ${SECRETS_LOG_PATH}' >> deploy/secrets_local.py
-            echo 'SECRETS_SECRET_KEY = ${SECRETS_SECRET_KEY}' >> deploy/secrets_local.py
-            echo pipenv run python manage.py test
+            pipenv run python manage.py test
 
       - store_artifacts:
           path: test-reports
