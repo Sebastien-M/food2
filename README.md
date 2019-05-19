@@ -42,18 +42,18 @@ Inside food2/deploy create a file called 'secrets_local.py' and fill the values:
 ```python
 import os  
   
-SECRETS_BASE_DIR            = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRETS_ALLOWED_HOSTS 	    = ['*']
-SECRETS_DB_NAME 		    = 'your db name'
-SECRETS_DB_USER 		    = 'your db user'  
-SECRETS_DB_PASS 		    = 'your db pass'  
-SECRETS_DB_HOST 		    = 'your db host'
-SECRETS_DB_PORT 		    = 'your db port'
-SECRETS_DEBUG 			    = True
-SECRETS_STATIC_URL 		    = '/static/'</span>
-SECRETS_STATIC_ROOT 	    = os.path.join(SECRETS_BASE_DIR, '/static/')
-SECRETS_LOG_PATH 		    = './debug.log'
-SECRETS_SECRET_KEY 		    = 'your secret key'
+SECRETS_BASE_DIR        = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SECRETS_ALLOWED_HOSTS   = ['*']
+SECRETS_DB_NAME         = 'your db name'
+SECRETS_DB_USER         = 'your db user'
+SECRETS_DB_PASS         = 'your db pass'
+SECRETS_DB_HOST         = 'your db host'
+SECRETS_DB_PORT         = 'your db port'
+SECRETS_DEBUG           = True
+SECRETS_STATIC_URL      = '/static/'</span>
+SECRETS_STATIC_ROOT     = os.path.join(SECRETS_BASE_DIR, '/static/')
+SECRETS_LOG_PATH        = './debug.log'
+SECRETS_SECRET_KEY      = 'your secret key'
 ```
 
 Start your virtualenv if you are using one
