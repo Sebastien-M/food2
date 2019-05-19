@@ -34,9 +34,7 @@ jobs:
           command: |
             sudo pip install pipenv
             pipenv install
-#            python3 -m venv venv
-#            . venv/bin/activate
-#            pip install -r requirements.txt
+
 
 #      - save_cache:
 #          paths:
@@ -51,7 +49,22 @@ jobs:
       - run:
           name: run tests
           command: |
-            pipenv run python food2/manage.py test
+            cd food2
+            touch deploy/secrets_local.py
+            echo 'import os' >> deploy/secrets_local.py
+            echo 'SECRETS_BASE_DIR = ${SECRETS_BASE_DIR}' >> deploy/secrets_local.py
+            echo 'SECRETS_ALLOWED_HOSTS = ${SECRETS_ALLOWED_HOSTS}' >> deploy/secrets_local.py
+            echo 'SECRETS_DB_NAME = ${SECRETS_DB_NAME}' >> deploy/secrets_local.py
+            echo 'SECRETS_DB_USER = ${SECRETS_DB_USER}' >> deploy/secrets_local.py
+            echo 'SECRETS_DB_PASS = ${SECRETS_DB_PASS}' >> deploy/secrets_local.py
+            echo 'SECRETS_DB_HOST = ${SECRETS_DB_HOST}' >> deploy/secrets_local.py
+            echo 'SECRETS_DB_PORT = ${SECRETS_DB_PORT}' >> deploy/secrets_local.py
+            echo 'SECRETS_DEBUG = ${SECRETS_DEBUG}' >> deploy/secrets_local.py
+            echo 'SECRETS_STATIC_URL = ${SECRETS_STATIC_URL}' >> deploy/secrets_local.py
+            echo 'SECRETS_STATIC_ROOT = ${SECRETS_STATIC_ROOT}' >> deploy/secrets_local.py
+            echo 'SECRETS_LOG_PATH = ${SECRETS_LOG_PATH}' >> deploy/secrets_local.py
+            echo 'SECRETS_SECRET_KEY = ${SECRETS_SECRET_KEY}' >> deploy/secrets_local.py
+            echo pipenv run python manage.py test
 
       - store_artifacts:
           path: test-reports
