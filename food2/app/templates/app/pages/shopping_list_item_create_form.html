@@ -2,18 +2,22 @@
 {% load i18n %}
 {% block content %}
 
-    <div class="card">
-        <div class="card-header">
-            <h4>{% trans "Ajouter un article à la liste" %}</h4>
+    <div class="card" style="margin-top: 20vh">
+        <div class="card-header center-align" style="padding-top: 20px">
+            <h4 class="center-block">{% trans "Modifier élément" %}</h4>
         </div>
-        <div class="card-body" style="padding: 0">
-            <div class="col-md-12" style="padding: 0;">
-                <form method="post">{% csrf_token %}
+        <div class="card-content center-align">
+            <div class="card-action">
+                <h5 class="text-center amber-text text-darken-1"
+                    style="color: #6088af">{{ random_recipe.name|capfirst }}</h5>
+
+                <form method="post" class="text-left">{% csrf_token %}
                     {{ form.as_p }}
-                    <input type="submit" value="Update">
+                    <button type="submit" class="btn btn-primary">{% trans "Ajouter élément" %}</button>
                 </form>
 
             </div>
         </div>
     </div>
+
 {% endblock %}

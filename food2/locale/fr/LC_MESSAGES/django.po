@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-18 13:35+0000\n"
+"POT-Creation-Date: 2019-05-19 16:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: MANDABA Sébastien seb.mandaba@gmail.com\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,88 +18,95 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: food2/app/templates/app/includes/navbar.html:11
+#: food2/app/templates/app/includes/navbar.html:10
+#: food2/app/templates/app/includes/navbar.html:48
 #: food2/app/templates/app/pages/daily_recipe.html:7
 msgid "Recette du jour"
 msgstr ""
 
-#: food2/app/templates/app/includes/navbar.html:12
+#: food2/app/templates/app/includes/navbar.html:13
+#: food2/app/templates/app/includes/navbar.html:51
 #: food2/app/templates/app/pages/week_menu.html:8
 msgid "Menu de la semaine"
 msgstr ""
 
-#: food2/app/templates/app/includes/navbar.html:13
-#: food2/app/templates/app/pages/shopping_list.html:9
+#: food2/app/templates/app/includes/navbar.html:16
+#: food2/app/templates/app/includes/navbar.html:53
+#: food2/app/templates/app/pages/shopping_list.html:7
 msgid "Liste de courses"
 msgstr ""
 
-#: food2/app/templates/app/includes/navbar.html:19
+#: food2/app/templates/app/includes/navbar.html:21
+#: food2/app/templates/app/includes/navbar.html:54
 msgid "Se déconnecter"
 msgstr ""
 
-#: food2/app/templates/app/includes/navbar.html:21
+#: food2/app/templates/app/includes/navbar.html:25
+#: food2/app/templates/app/includes/navbar.html:58
 #: food2/app/templates/app/pages/signin.html:10
 msgid "Se connecter"
 msgstr ""
 
-#: food2/app/templates/app/includes/navbar.html:22
+#: food2/app/templates/app/includes/navbar.html:28
+#: food2/app/templates/app/includes/navbar.html:60
 #: food2/app/templates/app/pages/signup.html:9
 msgid "Créer un compte"
 msgstr ""
 
-#: food2/app/templates/app/pages/daily_recipe.html:22
+#: food2/app/templates/app/pages/daily_recipe.html:14
+msgid "Ingrédients"
+msgstr ""
+
+#: food2/app/templates/app/pages/daily_recipe.html:24
+msgid "Etapes"
+msgstr ""
+
+#: food2/app/templates/app/pages/daily_recipe.html:29
 msgid "Aucune recette trouvée pour aujourd'hui"
 msgstr ""
 
-#: food2/app/templates/app/pages/daily_recipe.html:23
+#: food2/app/templates/app/pages/daily_recipe.html:31
 msgid "Définir"
 msgstr ""
 
 #: food2/app/templates/app/pages/define_recipe.html:7
-#: food2/app/templates/app/pages/week_menu.html:37
 msgid "Choisir une recette"
 msgstr ""
 
-#: food2/app/templates/app/pages/define_recipe.html:23
-msgid "Autre recette"
-msgstr ""
-
-#: food2/app/templates/app/pages/define_recipe.html:26
-msgid "Choisir cette recette"
-msgstr ""
-
-#: food2/app/templates/app/pages/shopping_list.html:24
-#: food2/app/templates/app/pages/shopping_list_item_update_form.html:37
+#: food2/app/templates/app/pages/shopping_list.html:23
+#: food2/app/templates/app/pages/shopping_list_item_update_form.html:40
 msgid "Quantité"
 msgstr ""
 
-#: food2/app/templates/app/pages/shopping_list.html:25
-#: food2/app/templates/app/pages/shopping_list_item_update_form.html:20
+#: food2/app/templates/app/pages/shopping_list.html:24
+#: food2/app/templates/app/pages/shopping_list_item_update_form.html:23
 msgid "Ingrédient"
 msgstr ""
 
-#: food2/app/templates/app/pages/shopping_list.html:26
-#: food2/app/templates/app/pages/shopping_list_item_update_form.html:54
+#: food2/app/templates/app/pages/shopping_list.html:25
+#: food2/app/templates/app/pages/shopping_list_item_update_form.html:63
 msgid "Acheté"
 msgstr ""
 
-#: food2/app/templates/app/pages/shopping_list.html:27
+#: food2/app/templates/app/pages/shopping_list.html:26
 msgid "Modifier"
 msgstr ""
 
-#: food2/app/templates/app/pages/shopping_list.html:28
+#: food2/app/templates/app/pages/shopping_list.html:27
+#: food2/app/templates/app/pages/week_menu.html:27
 msgid "Supprimer"
 msgstr ""
 
 #: food2/app/templates/app/pages/shopping_list_item_create_form.html:7
-msgid "Ajouter un article à la liste"
-msgstr ""
-
-#: food2/app/templates/app/pages/shopping_list_item_update_form.html:7
+#: food2/app/templates/app/pages/shopping_list_item_update_form.html:8
 msgid "Modifier élément"
 msgstr ""
 
-#: food2/app/templates/app/pages/shopping_list_item_update_form.html:69
+#: food2/app/templates/app/pages/shopping_list_item_create_form.html:16
+msgid "Ajouter élément"
+msgstr ""
+
+#: food2/app/templates/app/pages/shopping_list_item_update_form.html:70
 #: food2/app/templates/app/pages/signin.html:45
 #: food2/app/templates/app/pages/signup.html:84
 msgid "Envoyer"
@@ -130,16 +137,16 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: food2/app/templates/app/pages/week_menu.html:26
-msgid "Supprimer recette"
+#: food2/app/templates/app/pages/week_menu.html:31
+msgid "Changer"
 msgstr ""
 
-#: food2/app/templates/app/pages/week_menu.html:30
-msgid "Changer de recette"
-msgstr ""
-
-#: food2/app/templates/app/pages/week_menu.html:34
+#: food2/app/templates/app/pages/week_menu.html:36
 msgid "Recette non définie pour ce jour"
+msgstr ""
+
+#: food2/app/templates/app/pages/week_menu.html:39
+msgid "Choisir"
 msgstr ""
 
 #: food2/app/utils.py:42
