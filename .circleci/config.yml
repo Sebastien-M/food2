@@ -32,6 +32,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            sudo pip install pipenv
             pipenv install
 #            python3 -m venv venv
 #            . venv/bin/activate
@@ -50,8 +51,7 @@ jobs:
       - run:
           name: run tests
           command: |
-            pipenv shell
-            python food2/manage.py test
+            pipenv run python food2/manage.py test
 
       - store_artifacts:
           path: test-reports
