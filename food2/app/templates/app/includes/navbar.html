@@ -1,34 +1,81 @@
 {% load i18n %}
 
-<nav class="navbar navbar-inverse navbar-embossed navbar-expand-lg" role="navigation">
-    <div class="container">
-        <a class="navbar-brand" href="{% url 'index' %}">Food2</a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-01"></button>
-
-        <div class="collapse navbar-collapse" id="navbar-collapse-01">
-            <ul class="nav navbar-nav mr-auto col-md-8">
-                {% if user.is_authenticated %}
-                    <li><a href="{% url "daily-recipe" %}">{% trans "Recette du jour" %}</a></li>
-                    <li><a href="{% url "week-menu" %}">{% trans "Menu de la semaine" %}</a></li>
-                    <li><a href="{% url "shopping-list" %}">{% trans "Liste de courses" %}</a></li>
-                {% endif %}
-            </ul>
-
-            <div class="row">
-                {% if user.is_authenticated %}
-                    <li><a href="{% url "logout" %}">{% trans "Se déconnecter" %}</a></li>
-                {% else %}
-                    <li><a href="{% url "signin" %}">{% trans "Se connecter" %}</a></li>
-                    <li><a href="{% url "signup" %}">{% trans "Créer un compte" %}</a></li>
-                {% endif %}
-
-                <li><a href="{% url "change-language" lang='en' %}"><span
-                        class="flag-icon flag-icon-us flag-icon-squared"></span></a></li>
-                <li><a href="{% url "change-language" lang='fr' %}"><span
-                        class="flag-icon flag-icon-fr flag-icon-squared"></span></a></li>
-
-            </div>
-
-        </div>
+<nav class="grey darken-4">
+    <div class="nav-wrapper container">
+        <a id="navbrand" href="{% url 'index' %}" class="brand-logo">Food2</a>
+        <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            {% if user.is_authenticated %}
+                <li>
+                    <a class="nav-item" href="{% url "daily-recipe" %}">{% trans "Recette du jour" %}</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="{% url "week-menu" %}">{% trans "Menu de la semaine" %}</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="{% url "shopping-list" %}">{% trans "Liste de courses" %}</a>
+                </li>
+            {% endif %}
+            {% if user.is_authenticated %}
+                <li>
+                    <a class="nav-item" href="{% url "logout" %}">{% trans "Se déconnecter" %}</a>
+                </li>
+            {% else %}
+                <li>
+                    <a class="nav-item" href="{% url "signin" %}">{% trans "Se connecter" %}</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="{% url "signup" %}">{% trans "Créer un compte" %}</a>
+                </li>
+            {% endif %}
+            <li>
+                <a class="nav-item" href="{% url "change-language" lang='en' %}">
+                    <span class="flag-icon flag-icon-us flag-icon-squared"></span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-item" href="{% url "change-language" lang='fr' %}">
+                    <span class="flag-icon flag-icon-fr flag-icon-squared"></span>
+                </a>
+            </li>
+        </ul>
     </div>
 </nav>
+
+<ul class="sidenav grey darken-4" id="mobile">
+    {% if user.is_authenticated %}
+        <li class="sidemenu-item" style="margin-top: 50px;"><a style="color: white"
+                                                               href="{% url "daily-recipe" %}">{% trans "Recette du jour" %}</a>
+        </li>
+        <li class="sidemenu-item"><a style="color: white"
+                                     href="{% url "week-menu" %}">{% trans "Menu de la semaine" %}</a></li>
+        <li class="sidemenu-item"><a style="color: white"
+                                     href="{% url "shopping-list" %}">{% trans "Liste de courses" %}</a></li>
+        <li class="sidemenu-item"><a style="color: white" href="{% url "logout" %}">{% trans "Se déconnecter" %}</a>
+        </li>
+    {% else %}
+        <li class="sidemenu-item" style="margin-top: 50px;"><a style="color: white"
+                                                               href="{% url "signin" %}">{% trans "Se connecter" %}</a>
+        </li>
+        <li class="sidemenu-item"><a style="color: white" href="{% url "signup" %}">{% trans "Créer un compte" %}</a>
+        </li>
+    {% endif %}
+    <li class="sidemenu-item">
+        <a href="{% url "change-language" lang='en' %}">
+            <span class="flag-icon flag-icon-us flag-icon-squared"></span>
+        </a>
+    </li>
+    <li class="sidemenu-item">
+        <a href="{% url "change-language" lang='fr' %}">
+            <span class="flag-icon flag-icon-fr flag-icon-squared"></span>
+        </a>
+    </li>
+</ul>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let elems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(elems);
+    });
+</script>

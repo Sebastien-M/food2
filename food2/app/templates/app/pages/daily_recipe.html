@@ -3,25 +3,35 @@
 
 {% block content %}
     <div class="card">
-        <div class="card-header">
-            <h4>{% trans "Recette du jour" %}</h4>
+        <div class="card-header center-align" style="padding-top: 20px">
+            <h3>{% trans "Recette du jour" %}</h3>
+            <h5 class="amber-text text-darken-1">{{ todays_recipe.name }}</h5>
         </div>
-        <div class="card-body row">
+        <div class="card-content container-fluid row">
+        <div class="card-action">
             {% if todays_recipe %}
-                <h5 class="card-title col-md-12 text-center" style="margin-bottom: 70px">{{ todays_recipe.name }}</h5>
-                <div class="col-md-1"></div>
-                <ul class="col-md-4">
-                    {% for detail in recipe_details %}
-                        <li>
-                            {% if detail.quantity %}{{ detail.quantity }}{% endif %}{{ detail.ingredient.name }}
-                        </li>
-                    {% endfor %}
-                </ul>
-                <p class="card-text col-md-7">{{ recipe_steps|linebreaksbr }}</p>
+                <div class="col m6">
+                    <h5>{% trans "Ingrédients" %}</h5>
+                    <ul class="collection">
+                        {% for detail in recipe_details %}
+                            <li class="collection-item">
+                                {% if detail.quantity %}{{ detail.quantity }}{% endif %}{{ detail.ingredient.name }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col m6">
+                <h5>{% trans "Etapes" %}</h5>
+                    <p>{{ recipe_steps|linebreaksbr }}</p>
+                </div>
             {% else %}
-                <p class="card-text">{% trans "Aucune recette trouvée pour aujourd'hui" %}</p>
-                <a href="{% url "define-recipe" %}?date={{ todays_date }}" class="btn btn-primary">{% trans "Définir" %}</a>
+                <div class="center-align" style="margin-bottom: 50px;">
+                    <h5>{% trans "Aucune recette trouvée pour aujourd'hui" %}</h5>
+                    <a href="{% url "define-recipe" %}?date={{ todays_date }}"
+                       class="btn btn-primary">{% trans "Définir" %}</a>
+                </div>
             {% endif %}
+        </div>
         </div>
     </div>
 {% endblock %}

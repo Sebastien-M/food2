@@ -1,6 +1,11 @@
-#account_creatrion_form{
-    margin-top: 10%;
+#navbrand, .nav-item{
+    transition: .3s;
 }
-body{
-    background-color: #ECF0F1;
+
+#navbrand:hover{
+    color: #FFB300;
+}
+
+.nav-item:hover{
+    color: #FFB300;
 }
