@@ -16,6 +16,7 @@ from app.forms import SignUpForm, SignInForm, DefineRecipeForm
 from app.models import Recipe, DailyRecipe, IngredientRecipe, ShoppingListItem
 from app.utils import is_daily_recipe_defined_for_user, get_todays_recipe_for_user, format_recipe_steps, \
     get_this_week_menu, str_to_date
+from food2.settings import LANGUAGES
 
 
 class IndexView(TemplateView):
@@ -207,13 +208,34 @@ class DailyRecipeDeleteView(LoginRequiredMixin, DeleteView):
     def get(self, request, *args, **kwargs):
         return self.post(request, *args, **kwargs)
 
+    def delete(self, request, *args, **kwargs):
+        daily_recipe = self.get_object()
+        ingredients_recipe = IngredientRecipe.objects.filter(recipe=daily_recipe.recipe)
+        user = self.request.user
+        shopping_list = ShoppingListItem.objects.filter(user=user)
+        for ingredient_recipe in ingredients_recipe:
+            ingredient = ingredient_recipe.ingredient
+            new_quantity = ingredient_recipe.quantity
+            item_to_modify = shopping_list.filter(ingredient=ingredient)
+            if item_to_modify.exists():
+                # Only one instance of the ingredient in shopping list
+                item_to_modify = item_to_modify.get()
+                if item_to_modify.quantity is None:
+                    item_to_modify.delete()
+                elif float(item_to_modify.quantity) - new_quantity == 0:
+                    item_to_modify.delete()
+                else:
+                    item_to_modify.quantity = float(item_to_modify.quantity) - new_quantity
+                    item_to_modify.save()
+        return super(DailyRecipeDeleteView, self).delete(request, *args, **kwargs)
+
 
 class ChangeLanguageView(View):
 
     def get(self, request, *args, **kwargs):
         user_language = kwargs.get('lang')
         # TODO: use enum for languages
-        if user_language in ['en', 'fr']:
+        if user_language in [lang[0] for lang in LANGUAGES]:
             translation.activate(user_language)
             request.session[translation.LANGUAGE_SESSION_KEY] = user_language
         return redirect(reverse_lazy('week-menu'))
