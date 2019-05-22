@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('app', '0001_initial'),
     ]
@@ -15,12 +14,14 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='dailyrecipe',
             name='recipe',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='daily_recipe', to='app.Recipe'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='daily_recipe', to='app.Recipe'),
         ),
         migrations.AlterField(
             model_name='dailyrecipe',
             name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='daily_recipe', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='daily_recipe',
+                                    to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
             model_name='ingredientrecipe',
@@ -30,6 +31,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='shoppinglistitem',
             name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='shopping_list', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='shopping_list',
+                                    to=settings.AUTH_USER_MODEL),
         ),
     ]
