@@ -32,8 +32,8 @@ class IngredientRecipe(models.Model):
     def __str__(self):
         return '{} - {}'.format(self.recipe.name, self.ingredient.name)
 
-    ingredient = models.ForeignKey(Ingredient, on_delete='cascade')
-    recipe = models.ForeignKey(Recipe, on_delete='cascade', related_name='ingredient_quantity')
+    ingredient = models.ForeignKey(Ingredient, on_delete=models.CASCADE)
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name='ingredient_quantity')
     quantity = models.FloatField(blank=True, null=True)
 
 
@@ -41,9 +41,9 @@ class DailyRecipe(models.Model):
     class Meta:
         unique_together = (('user', 'day'),)
 
-    user = models.ForeignKey(User, related_name='daily_recipe', on_delete='cascade')
+    user = models.ForeignKey(User, related_name='daily_recipe', on_delete=models.CASCADE)
     day = models.DateField(default=timezone.now, db_index=True)
-    recipe = models.ForeignKey(Recipe, on_delete='cascade', related_name='daily_recipe', unique=False, blank=True,
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name='daily_recipe', unique=False, blank=True,
                                null=True)
 
     def __str__(self):
@@ -51,7 +51,7 @@ class DailyRecipe(models.Model):
 
 
 class ShoppingListItem(models.Model):
-    user = models.ForeignKey(User, related_name='shopping_list', on_delete='cascade')
+    user = models.ForeignKey(User, related_name='shopping_list', on_delete=models.CASCADE)
     ingredient = models.CharField(max_length=255)
     quantity = models.CharField(max_length=10, null=True, blank=True)
     bought = models.BooleanField(default=False, blank=True, null=True)
