@@ -12,7 +12,7 @@
 
                 {% for day_name, day_recipe in week_menu.items %}
                     <div class="col m6 s12 center-block">
-                        <div class="card bg-light amber lighten-5" style="min-height: 230px;">
+                        <div class="card bg-light grey lighten-3" style="min-height: 230px;">
                             <div class="card-header">{% trans day_name %} {{ day_recipe.date|recipe_date_str_to_date }}</div>
                             <div class="card-action center-align">
                                 {% if day_recipe.recipe %}
