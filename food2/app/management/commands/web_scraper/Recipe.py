@@ -58,5 +58,8 @@ class Recipe:
         recipe_steps = []
         steps = self.recipe_object.find_all('li', 'recipe-preparation__list__item')
         for step in steps:
-            recipe_steps.append(step.text.split('\t\t\t')[1].split('\t\t')[0])
+            try:
+                recipe_steps.append(step.text.split('\t\t\t')[1].split('\t\t')[0])
+            except IndexError:
+                recipe_steps.append(step.text.split('\t')[0].split('\t\t')[0])
         return recipe_steps
