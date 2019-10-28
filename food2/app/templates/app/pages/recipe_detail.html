@@ -10,10 +10,15 @@
             <div class="card-action">
                 <div class="col m6">
                     <h5>{% trans "Ingrédients" %}</h5>
+                    <p>Pour <span class="nb_people">1</span> personne(s) <span>
+                        <button class="add_person btn-floating btn-small waves-effect waves-light orange">+</button>
+                        <button class="remove_person  btn-floating btn-small waves-effect waves-light orange">-</button>
+                    </span></p>
                     <ul class="collection">
                         {% for detail in recipe_details %}
                             <li class="collection-item">
-                                {% if detail.quantity %}{{ detail.quantity }}{% endif %}{{ detail.ingredient.name }}
+                                {% if detail.quantity %}
+                                    <span class="recipe_quantity">{{ detail.quantity }}</span>{% endif %}{{ detail.ingredient.name }}
                             </li>
                         {% endfor %}
                     </ul>
@@ -25,5 +30,36 @@
             </div>
         </div>
     </div>
+    <script>
+        let nb_people = 1;
+        let person_add = document.querySelector('.add_person');
+        let person_remove = document.querySelector('.remove_person');
+        let nb_people_container = document.querySelector('.nb_people');
+        let recipe_quantities = document.querySelectorAll('.recipe_quantity');
+        let recipe_quantity_value = null;
+        let recipe_quantity = recipe_quantities[0];
 
+        person_add.addEventListener("click", () => {
+            nb_people += 1;
+            nb_people_container. innerHTML = nb_people;
+            recipe_quantities.forEach((recipe_quantity) => {
+                let recipe_quantity_value = parseFloat(recipe_quantity.innerHTML.replace(',', '.'));
+                recipe_quantity.innerHTML = ((recipe_quantity_value / (nb_people - 1)) * nb_people).toString();
+            });
+        });
+
+        person_remove.addEventListener("click", () => {
+            if (nb_people <= 1){
+                return;
+            }
+            nb_people -= 1;
+            nb_people_container. innerHTML = nb_people;
+            recipe_quantities.forEach((recipe_quantity) => {
+                let recipe_quantity_value = parseFloat(recipe_quantity.innerHTML.replace(',', '.'));
+                recipe_quantity.innerHTML = ((recipe_quantity_value / (nb_people + 1)) * nb_people).toString();
+            });
+        });
+
+
+    </script>
 {% endblock %}
