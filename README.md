@@ -1,5 +1,5 @@
 
-# Food2 
+# Food for you
   
 A Django web app allowing you to choose a recipe to cook for each day of the week.
 Once your recipe chosen, all its required ingredients will be added to a shopping list that you can modify
